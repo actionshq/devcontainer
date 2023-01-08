@@ -1,0 +1,5 @@
+# must use .yml because of release-please limitation
+releaseType: simple
+bumpMinorPreMajor: true
+bumpPatchForMinorPreMajor: true
+handleGHRelease: true

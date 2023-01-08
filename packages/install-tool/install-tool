@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euo pipefail
+
+/usr/lib/install-tool/${1}.sh
