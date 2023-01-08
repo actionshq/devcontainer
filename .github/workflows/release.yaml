@@ -6,7 +6,7 @@ jobs:
   release:
     runs-on: ubuntu-22.04
     container:
-      image: ghcr.io/actionhq/devcontainer:v0.1.0
+      image: ghcr.io/actionshq/devcontainer:v0.1.0
     steps:
     - uses: actions/checkout@v3
     - run: echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
