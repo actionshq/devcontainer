@@ -49,6 +49,12 @@ ENV NODE_VERSION=18.13.0
 COPY packages/install-tool/node.sh /usr/lib/install-tool/node.sh
 RUN /usr/lib/install-tool/node.sh
 
+# gcloud
+# renovate: source=docker name=google/cloud-sdk versioning=docker
+ENV GCLOUD_VERSION=410.0.0
+COPY packages/install-tool/gcloud.sh /usr/lib/install-tool/gcloud.sh
+RUN /usr/lib/install-tool/gcloud.sh
+
 # cleanup
 RUN apt-get autoremove -y && \
     apt-get clean -y && \
