@@ -55,6 +55,12 @@ ENV GCLOUD_VERSION=410.0.0
 COPY packages/install-tool/gcloud.sh /usr/lib/install-tool/gcloud.sh
 RUN /usr/lib/install-tool/gcloud.sh
 
+# terraform
+# renovate: source=github-tags name=hashicorp/terraform versioning=semver
+ENV TERRAFORM_VERSION=1.3.7
+COPY packages/install-tool/terraform.sh /usr/lib/install-tool/terraform.sh
+RUN /usr/lib/install-tool/terraform.sh
+
 # cleanup
 RUN apt-get autoremove -y && \
     apt-get clean -y && \
